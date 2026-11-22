@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Session 6 of 6. A constructed one-pager measured in your browser: reading-path length and crossings, label-to-part distance and key lookups, every text-on-fill contrast ratio, and overlaps. Four fixes climb the score from 43.1 to 95.9; tidying the labels into a legend drops it to 72.7; adding decoration drops it to 84.2.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="The explainer bench - learn information design with phoebe">
+<meta property="og:description" content="Session 6 of 6. Move the cards, switch the labels, and watch the geometry and the contrast ratios recompute. Measured, not asserted.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-information-design-with-phoebe/courses/06-the-explainer-bench.html">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-information-design-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The explainer bench - learn information design with phoebe">
+<meta name="twitter:description" content="Session 6 of 6. A one-pager measured live: path, labels, contrast, overlaps.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-information-design-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Session 6 · The explainer bench - learn information design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-information-design-with-phoebe</a> / Session 6 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Information Design with Phoebe · Session 6 of 6</div>
+    <h1>The explainer <span class="accent">bench</span></h1>
+    <p class="sub">Five sessions of advice, and tonight every piece of it is measured. Wrenmoor's one-pager sits in this page as a set of boxes, parts and colours. Your browser computes how far the numbered reading path travels and whether it crosses itself, how far each label sits from the part it names and how many names live in a key, the WCAG contrast ratio of every piece of text on its fill, and which boxes sit on top of each other. Four fixes, one tidy-looking trap, one break button, and a second constructed brief to try it on.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Bench night</span>
+      <span class="chip audience">Bring the one-pager you have been redrawing</span>
+      <span class="chip audience">No code, all clicking and dragging</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:2">3-12 · How a page becomes numbers</span>
+      <span class="a3" style="flex:6">12-38 · The bench, rung by rung</span>
+      <span class="a4" style="flex:2">38-45 · What the score is not, Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we start</h2>
+    </div>
+    <p class="lede">Both pages on the bench are constructed. The default is Wrenmoor Water's explainer, "from reservoir to your tap", in the state Nia's agency first delivered it: the parts of the cutaway named in a lettered key squeezed in under the step cards, the six steps numbered in the order they were pasted in, two cards in a pale cyan with white text, and a caption in a grey almost the colour of its panel. The second brief, Ashbrook Library's "how a reserved book reaches you", is invented too, and has its own faults to find. Nothing measured here is a fact about a real document; everything measured is computed, not assumed.</p>
+
+    <div class="legend">
+      <span class="pill">🎫 Clear all three quiz questions to stamp your passport</span>
+      <span class="pill">measured = computed from the page's geometry and colours</span>
+      <span class="pill">stated model = a rule printed on the widget, not a law</span>
+    </div>
+
+    <div class="callout win">
+      <p><strong>★ What you walk out with tonight.</strong> Six measures you can take on any one-pager with a ruler and a contrast checker, the size of each fix on a real layout, proof that a tidy legend costs the reader something you can count, a reason to distrust any single score including this one, and a checklist to run before your next page ships.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-1">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers what the bench measures</span>
+      <h2>How a page becomes numbers</h2>
+      <span class="tag concept">6 min live</span>
+    </div>
+    <p class="lede">The bench knows the page as boxes (the title, the drawing panel, six step cards, a key if there is one, label boxes, and a decoration if you add one), parts in the drawing with a point each, and a text colour and fill for every piece of text. From those it takes six measurements, defined the same way in the browser and in an independent Python run that agrees with it on all 168 canon values.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 354" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four panels. Reading path: four numbered stops joined in order, where the segment from 1 to 2 crosses the segment from 3 to 4. Labels: a part with its name beside it, and a part with a letter whose name sits in a key some distance away. Contrast: two cyan swatches, white text on cyan measures 2.01 to 1 and fails, ink on cyan measures 8.03 to 1 and passes. Overlaps: two boxes that partly overlap count as one overlap; a box fully inside another does not count.">
+        <defs>
+          <filter id="b6aSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="43" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="b6aHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#AB331C" stroke-width="1" opacity=".5"/></pattern>
+        </defs>
+        <style>
+          .b6aH { font: 800 12px Inter, sans-serif; fill: #1A2130; }
+          .b6aL { font: 600 12px Inter, sans-serif; fill: #1A2130; }
+          .b6aS { font: 400 11px Inter, sans-serif; fill: #586070; }
+          .b6aB { font: 800 11px Inter, sans-serif; fill: #12505F; }
+          .b6aA { font: 700 11px Inter, sans-serif; fill: #AB331C; }
+          .b6aW { font: 800 11px Inter, sans-serif; fill: #FFFFFF; }
+          .b6aN { font: 400 12px Inter, sans-serif; fill: #586070; }
+        </style>
+
+        <text class="b6aH" x="30" y="24">SIX MEASUREMENTS, DRAWN</text>
+
+        <g filter="url(#b6aSk)" fill="none" stroke="#1A2130" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="40" y="40" width="390" height="130" rx="10" transform="rotate(-0.3 235 105)" fill="#FFFFFF"/>
+          <rect x="450" y="40" width="390" height="130" rx="10" transform="rotate(0.3 645 105)" fill="#FFFFFF"/>
+          <rect x="40" y="184" width="390" height="134" rx="10" transform="rotate(0.3 235 251)" fill="#FFFFFF"/>
+          <rect x="450" y="184" width="390" height="134" rx="10" transform="rotate(-0.3 645 251)" fill="#FFFFFF"/>
+          <circle cx="160" cy="114" r="15" fill="#E3F3F7" stroke="#12505F" stroke-width="1.2" stroke-dasharray="3 3"/>
+          <path d="M90 84 L230 144" stroke="#AB331C" stroke-dasharray="6 5"/>
+          <path d="M230 144 L230 84" stroke="#AB331C" stroke-dasharray="6 5"/>
+          <path d="M230 84 L90 144" stroke="#AB331C" stroke-dasharray="6 5"/>
+          <path d="M485 96 L494 92" stroke="#586070" stroke-width="1.4"/>
+          <rect x="494" y="80" width="86" height="22" rx="5" fill="#FFFFFF"/>
+          <path d="M632 100 C660 108 686 116 704 122" stroke="#586070" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <rect x="704" y="114" width="122" height="24" rx="5" fill="#ECE7E3"/>
+          <rect x="60" y="218" width="76" height="40" rx="6" fill="#72C3D4"/>
+          <rect x="244" y="218" width="76" height="40" rx="6" fill="#72C3D4"/>
+          <rect x="470" y="214" width="110" height="52" rx="6" fill="none"/>
+          <rect x="548" y="238" width="110" height="52" rx="6" fill="none" stroke="#AB331C" stroke-dasharray="5 4"/>
+          <rect x="690" y="214" width="130" height="76" rx="6" fill="none"/>
+          <rect x="712" y="232" width="60" height="30" rx="4" fill="none" stroke="#586070"/>
+        </g>
+
+        <circle cx="90" cy="84" r="11" fill="#AB331C"/><text class="b6aW" x="90" y="88" text-anchor="middle">1</text>
+        <circle cx="230" cy="144" r="11" fill="#AB331C"/><text class="b6aW" x="230" y="148" text-anchor="middle">2</text>
+        <circle cx="230" cy="84" r="11" fill="#AB331C"/><text class="b6aW" x="230" y="88" text-anchor="middle">3</text>
+        <circle cx="90" cy="144" r="11" fill="#AB331C"/><text class="b6aW" x="90" y="148" text-anchor="middle">4</text>
+        <circle cx="480" cy="98" r="5" fill="#AB331C"/>
+        <circle cx="622" cy="96" r="10" fill="#AB331C"/><text class="b6aW" x="622" y="100" text-anchor="middle">E</text>
+
+        <text class="b6aA" x="56" y="62">READING PATH AND CROSSINGS</text>
+        <text class="b6aS" x="270" y="90">length: add up the</text>
+        <text class="b6aS" x="270" y="106">dashed steps, in order</text>
+        <text class="b6aB" x="270" y="132">1 to 2 crosses 3 to 4,</text>
+        <text class="b6aB" x="270" y="148">shaded: one crossing</text>
+
+        <text class="b6aA" x="466" y="62">LABEL DISTANCE AND LOOKUPS</text>
+        <text class="b6aL" x="502" y="95">Sand filter</text>
+        <text class="b6aS" x="466" y="128">beside its part:</text>
+        <text class="b6aS" x="466" y="144">a few px, no lookup</text>
+        <text class="b6aL" x="712" y="130">E  Sand filter</text>
+        <text class="b6aS" x="704" y="156">in a key: far, one lookup</text>
+
+        <text class="b6aA" x="56" y="206">CONTRAST, WCAG 2.2</text>
+        <text class="b6aS" x="146" y="234">white text here:</text>
+        <text class="b6aB" x="146" y="250">2.01:1, fails 4.5</text>
+        <text class="b6aL" x="282" y="243" text-anchor="middle">Aa</text>
+        <text class="b6aS" x="330" y="234">ink text:</text>
+        <text class="b6aB" x="330" y="250">8.03:1, passes</text>
+        <text class="b6aS" x="56" y="290">every text-on-fill pair on the page is scored</text>
+
+        <text class="b6aA" x="466" y="206">OVERLAPS</text>
+        <text class="b6aS" x="560" y="306" text-anchor="middle">partly on top: counts 1</text>
+        <text class="b6aS" x="755" y="282" text-anchor="middle">inside: 0</text>
+
+        <text class="b6aN" x="30" y="342">Plus the shortest route through the same stops, found by trying every order, to compare the path against.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - each measure is geometry or arithmetic you could do with a ruler and a contrast checker; the bench just does all of them at once</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Path, crossings and the entry point<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Reading path</strong> is the distance a reader's eye travels if it follows the numbers: from the entry point to the title if the title is not the entry, then step 1, step 2, and on to step 6, centre to centre. The bench also finds the <strong>shortest route</strong> through the same stops from the same entry by trying every order, so you can see how much the numbering costs. A <strong>crossing</strong> is a pair of steps on the route whose lines properly intersect; session 2 explained why a crossed route makes the reader search.</p>
+        <p>The <strong>entry point</strong> is a stated model, not a measurement: the eye enters at the largest stop whose centre sits in the top quarter of the page. It is a crude stand-in for what session 2 and the dashboard course's visual-weight rule describe, and it is printed on the widget so you can disagree with it.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Labels, contrast and overlaps<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Label distance</strong> is the distance from each part's point in the drawing to the nearest edge of the words that name it: its label box when labels are direct, its row in the key when they are not. <strong>Lookups</strong> counts the names that live in a key, each one a trip away from the drawing and back (session 5's split attention). <strong>Contrast</strong> applies the WCAG 2.2 formula to every text colour on its fill and passes it at 4.5:1; all text on the bench is treated as normal size. <strong>Overlaps</strong> counts pairs of boxes that intersect without one sitting wholly inside the other, so a label inside the drawing panel is fine and a key on top of a card is not.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="bench">
+    <div class="section-kicker">
+      <span class="klabel">Build-along · the bench</span>
+      <h2>Wrenmoor's one-pager, rung by rung</h2>
+      <span class="tag demo">★ 26 min · the main event</span>
+    </div>
+    <p class="lede">Start on rung 1 and read the verdict line, then the six measurements, then the scorecard table at the bottom. Work down the rungs in order and say out loud what moved and what did not before you click the next one. Then drag a card somewhere silly and watch the path and the crossings change. Switch to Ashbrook Library when you want a second case.</p>
+
+    <div id="ifd-bench" data-brief="wrenmoor"></div>
+
+    <div class="callout tip">
+      <p><strong>Read rung 1 in this order.</strong> One crossing (step 1 to 2 crosses step 3 to 4), eight lookups at a mean label distance of 443.8 px, five of 37 text pairs failing (the caption at 1.27:1 and the two cyan cards at 2.01:1), three overlaps where the squeezed key sits on steps 2, 4 and 5. Score 43.1 of 100. Every one of those faults is a session you have already done.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-2">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers the ladder</span>
+      <h2>Four fixes, one trap, one break</h2>
+      <span class="tag concept">6 min live</span>
+    </div>
+    <p class="lede">These are the numbers the bench prints on Wrenmoor's page, written down so they can be argued with after class. An independent Python run of the same steps on the same brief gives the same values to nine decimal places.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Scores out of 100 on the Wrenmoor brief. Draft 43.1, direct labels 83.3, renumbered path 91.5, contrast fixed 95.9, tidy legend anti-lever 72.7, decoration break 84.2.">
+        <defs>
+          <filter id="b6bSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="47" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+        </defs>
+        <style>
+          .b6bH { font: 800 12px Inter, sans-serif; fill: #1A2130; }
+          .b6bL { font: 600 12px Inter, sans-serif; fill: #1A2130; }
+          .b6bV { font: 800 12px Inter, sans-serif; fill: #1A2130; }
+          .b6bW { font: 800 12px Inter, sans-serif; fill: #FFFFFF; }
+          .b6bA { font: 700 11px Inter, sans-serif; fill: #AB331C; }
+          .b6bN { font: 400 12px Inter, sans-serif; fill: #586070; }
+        </style>
+
+        <text class="b6bH" x="30" y="26">WRENMOOR, SCORE OUT OF 100 ON EACH RUNG</text>
+
+        <g filter="url(#b6bSk)" fill="none" stroke="#1A2130" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="260" y="50" width="207" height="30" rx="5" fill="#F3CDC2"/>
+          <rect x="260" y="96" width="400" height="30" rx="5" fill="#F3CDC2"/>
+          <rect x="260" y="142" width="439" height="30" rx="5" fill="#F3CDC2"/>
+          <rect x="260" y="188" width="460" height="30" rx="5" fill="#AB331C"/>
+          <rect x="260" y="234" width="349" height="30" rx="5" fill="#FEF2F2" stroke="#FCA5A5"/>
+          <rect x="260" y="280" width="404" height="30" rx="5" fill="#FEF2F2" stroke="#FCA5A5"/>
+        </g>
+
+        <text class="b6bL" x="240" y="70" text-anchor="end">1 Draft as delivered</text>
+        <text class="b6bL" x="240" y="116" text-anchor="end">2 Direct labels</text>
+        <text class="b6bL" x="240" y="162" text-anchor="end">3 Renumbered path</text>
+        <text class="b6bL" x="240" y="208" text-anchor="end">4 Contrast fixed</text>
+        <text class="b6bL" x="240" y="254" text-anchor="end">5 Tidy legend (anti)</text>
+        <text class="b6bL" x="240" y="300" text-anchor="end">6 Decoration (break)</text>
+        <text class="b6bV" x="272" y="70">43.1</text>
+        <text class="b6bV" x="272" y="116">83.3</text>
+        <text class="b6bV" x="272" y="162">91.5</text>
+        <text class="b6bW" x="272" y="208">95.9</text>
+        <text class="b6bV" x="272" y="254">72.7</text>
+        <text class="b6bV" x="272" y="300">84.2</text>
+        <text class="b6bA" x="480" y="70">key, crossing, contrast, overlaps</text>
+        <text class="b6bA" x="732" y="208">the fixed page</text>
+        <text class="b6bA" x="622" y="254">8 lookups again</text>
+        <text class="b6bA" x="676" y="300">2 overlaps</text>
+
+        <text class="b6bN" x="30" y="340">Rungs 5 and 6 start from rung 4. Measured geometry and contrast; the weights are a stated model.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - direct labels are the biggest single fix on this page; the two red rungs each undo part of it</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Rungs 2 to 4: the three fixes<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p><strong>Direct labels</strong> take the mean label distance from 443.8 px to 21.3 px, lookups from eight to zero, and remove the key, which also removes all three overlaps: score 43.1 to 83.3. <strong>Renumbering</strong> moves the cards so 1 to 3 runs along the top row and 4 to 6 comes back along the bottom; the crossing goes and the path shortens from 1514 px to 1323 px: 91.5. <strong>Fixing contrast</strong> swaps white-on-cyan for ink-on-cyan (8.03:1) and the near-invisible caption for muted ink: 28 of 28 pairs pass, 95.9.</p>
+        <p>Notice what direct labels did to the contrast count: it went from 32 of 37 to 23 of 28, because the key's letters and rows left the page. The failing pairs did not change; there were just fewer passing ones around them. A share is always a share of something.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>The second brief: Ashbrook Library<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Ashbrook's draft is worse in a different place: its six steps were numbered so the route crosses itself five times, and the path scores zero before anything else is fixed: 29.3 overall. Its contrast faults are near misses you would pass by eye, the vermilion step titles on pale pink at 4.45:1 and the grey step text on the same pink at 4.31:1. Renumbering is the big fix there (69.9 to 92.6), and the contrast fix takes it to 96.1. Same rules, different page, different order of importance.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The near miss nobody sees.</strong> 4.45:1 looks fine on a good monitor in a bright office. It is under the 4.5:1 line WCAG 2.2 sets for normal text, and it is the kind of pair that fails for a reader with low vision on a phone in daylight. Measure the pair; do not judge it by eye.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-3">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers the anti-lever, the break button and the limits</span>
+      <h2>Tidy is not the same as clear</h2>
+      <span class="tag concept">6 min live</span>
+    </div>
+    <p class="lede">Rung 5 is the move every design review suggests at some point: "the labels look messy, put them in a neat legend". The page does look calmer. The bench counts the cost: every part is a lookup again and the mean distance from part to name goes from 21.3 px to 475.8 px. Score 95.9 to 72.7.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Before and after. Left: four parts, each named beside itself, mean label distance 21.3 px and no lookups on Wrenmoor. Right: the same four parts carry letters A to D and their names sit in a tidy key below; dashed lines show the trip from each part to its name, mean distance 475.8 px and eight lookups on Wrenmoor.">
+        <defs>
+          <filter id="b6cSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="53" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+        </defs>
+        <style>
+          .b6cH { font: 800 12px Inter, sans-serif; fill: #1A2130; }
+          .b6cL { font: 600 12px Inter, sans-serif; fill: #1A2130; }
+          .b6cS { font: 400 11px Inter, sans-serif; fill: #586070; }
+          .b6cB { font: 800 11px Inter, sans-serif; fill: #12505F; }
+          .b6cA { font: 700 11px Inter, sans-serif; fill: #AB331C; }
+          .b6cW { font: 800 11px Inter, sans-serif; fill: #FFFFFF; }
+          .b6cN { font: 400 12px Inter, sans-serif; fill: #586070; }
+        </style>
+
+        <text class="b6cH" x="30" y="24">THE SAME FOUR PARTS, NAMED TWO WAYS</text>
+
+        <g filter="url(#b6cSk)" fill="none" stroke="#1A2130" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="40" y="48" width="390" height="200" rx="12" transform="rotate(-0.3 235 148)" fill="#FCEFEA" stroke="#AB331C"/>
+          <rect x="450" y="48" width="390" height="200" rx="12" transform="rotate(0.3 645 148)" fill="#FEF2F2" stroke="#FCA5A5"/>
+          <path d="M90 120 L170 150 L250 120 L330 150" stroke="#72C3D4" stroke-width="5"/>
+          <path d="M500 120 L580 150 L660 120 L740 150" stroke="#72C3D4" stroke-width="5"/>
+          <path d="M500 130 L498 198" stroke="#586070" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <path d="M580 160 L586 198" stroke="#586070" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <path d="M660 130 L672 198" stroke="#586070" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <path d="M740 160 L758 198" stroke="#586070" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <rect x="470" y="198" width="350" height="34" rx="6" fill="#ECE7E3"/>
+        </g>
+
+        <circle cx="90" cy="120" r="5" fill="#AB331C"/>
+        <circle cx="170" cy="150" r="5" fill="#AB331C"/>
+        <circle cx="250" cy="120" r="5" fill="#AB331C"/>
+        <circle cx="330" cy="150" r="5" fill="#AB331C"/>
+        <text class="b6cL" x="66" y="104">screen</text>
+        <text class="b6cL" x="146" y="176">tank</text>
+        <text class="b6cL" x="232" y="104">filter</text>
+        <text class="b6cL" x="316" y="176">tap</text>
+
+        <circle cx="500" cy="120" r="10" fill="#AB331C"/><text class="b6cW" x="500" y="124" text-anchor="middle">A</text>
+        <circle cx="580" cy="150" r="10" fill="#AB331C"/><text class="b6cW" x="580" y="154" text-anchor="middle">B</text>
+        <circle cx="660" cy="120" r="10" fill="#AB331C"/><text class="b6cW" x="660" y="124" text-anchor="middle">C</text>
+        <circle cx="740" cy="150" r="10" fill="#AB331C"/><text class="b6cW" x="740" y="154" text-anchor="middle">D</text>
+        <text class="b6cL" x="482" y="220">A screen</text>
+        <text class="b6cL" x="568" y="220">B tank</text>
+        <text class="b6cL" x="646" y="220">C filter</text>
+        <text class="b6cL" x="734" y="220">D tap</text>
+
+        <text class="b6cA" x="56" y="70">DIRECT · Wrenmoor 21.3 px, 0 lookups</text>
+        <text class="b6cA" x="466" y="70">TIDY KEY · Wrenmoor 475.8 px, 8 lookups</text>
+        <text class="b6cS" x="56" y="232">the name is where the eye already is</text>
+
+        <text class="b6cN" x="30" y="280">The key looks calmer because the work moved: from the designer's page to the reader's eyes.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - every dashed line on the right is a trip the reader makes and the designer never sees</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The anti-lever, with its honest nuance<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Spatial contiguity is the reason: Mayer and Moreno report that people understand better when printed words sit near the parts of the graphic they describe (effect size .48 in a single study, with similar effects in books). The tidy key separates every name from its part. The bench cannot measure understanding; it measures the distance and the count of lookups, which is the mechanism the research names.</p>
+        <p>The nuance: a key is the right tool when the same symbol repeats many times (twenty identical valve icons, one entry in the key), or when parts are too small and dense to label without covering the drawing. On a page with eight distinct parts and room beside each, the key is a tax. The bench's score also gives the key full marks on contrast and overlaps, which is fair: it is tidy. It just is not clear.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The break button: add decoration<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Rung 6 adds a mascot block at the top right, slightly larger than the title. Under the entry rule it is now the first thing the eye lands on, so the path runs mascot, title, step 1 and onwards: 1323 px becomes 1506 px. It also sits on the title and the drawing panel, two overlaps. Score 95.9 to 84.2. This is the bench showing it can report a worse number for exactly the move session 1 warned about. If no input could lower the score, the bench would be measuring nothing.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>What the score is not<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The score is four parts of 25 with weights written on the widget: path = 25 x shortest/actual, minus 5 per crossing; labels = 25 x (1 - distance/300), minus 1 per lookup; contrast = 25 x share of pairs passing; overlaps = 25 minus 6 per pair. Those weights are a teaching model. Nobody has measured that a crossing costs exactly five points of anything. Change the weights and the order of rungs 5 and 6 could change.</p>
+        <p>What survives any reasonable weighting is the direction of each measurement: direct labels shorten the trip from part to name, a renumbered route stops crossing, a failing pair becomes a passing one, a key on top of a card stops covering it. Argue with the score; trust the measurements. The bench also runs a self-test on load: seven properties, including that black on white is exactly 21:1 and that #777777 on white is 4.48:1, which fails when the sRGB linearisation step is deliberately removed.</p>
+      </div>
+    </details>
+
+    <div class="callout tip">
+      <p><strong>Take the six measurements to your own page.</strong> You do not need the bench. Draw the numbered route with a pencil and count crossings; measure from each part to its name with a ruler; run every text colour through any WCAG contrast checker; look for anything sitting on anything else. Most pages fail one of the four in under five minutes.</p>
+    </div>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>After the last session</h2>
+      <span class="tag exercise">40 min</span>
+    </div>
+    <ol>
+      <li><strong>Beat 95.9 on Wrenmoor, or explain why you cannot.</strong> Start from rung 4 and drag cards. Write down the best score you reach and what you moved.</li>
+      <li><strong>Run Ashbrook's ladder</strong> and write one sentence on why renumbering matters more there than on Wrenmoor.</li>
+      <li><strong>Measure your own one-pager by hand</strong>: route crossings, the three longest part-to-name trips, every contrast pair, every overlap.</li>
+      <li><strong>Change one weight in your head.</strong> If a crossing cost 10 points instead of 5, which Ashbrook rungs would move, and would any change order?</li>
+    </ol>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions</h2>
+    </div>
+    <p>Clear all three and session 6 gets stamped in your passport.</p>
+
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · On Wrenmoor, "tidy it into a legend" takes the score from 95.9 to 72.7. What did the bench measure that caused the drop?</p>
+      <button class="qopt" type="button">A · The key failed the contrast check</button>
+      <button class="qopt" type="button">B · Every part became a lookup again and the mean distance from part to name rose from 21.3 px to 475.8 px</button>
+      <button class="qopt" type="button">C · The key overlapped the step cards</button>
+      <button class="qopt" type="button">D · The reading path started crossing itself</button>
+      <p class="qwhy">The tidy key passes contrast and sits clear of the cards, so contrast and overlaps stay at full marks. What it costs is distance and lookups: eight names moved away from their parts. That is the split-attention mechanism, counted.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="3">
+      <p class="qtext">2 · Ashbrook's step titles are vermilion #AB331C on pale pink #F3CDC2. What does the bench report?</p>
+      <button class="qopt" type="button">A · 4.45:1, a pass, because it rounds to 4.5</button>
+      <button class="qopt" type="button">B · Nothing, because coloured text is exempt</button>
+      <button class="qopt" type="button">C · 2.01:1, a clear fail</button>
+      <button class="qopt" type="button">D · 4.45:1, a fail: normal-size text needs at least 4.5:1 under WCAG 2.2</button>
+      <p class="qwhy">The threshold is a minimum, not a rounding target. 4.45 is a near miss that looks fine by eye, which is exactly why it gets measured. 2.01:1 is Wrenmoor's white on cyan.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Which statement about the bench's score is accurate?</p>
+      <button class="qopt" type="button">A · The weights are a stated teaching model; the measurements under them (route length, crossings, distances, lookups, contrast ratios, overlaps) are computed from the page</button>
+      <button class="qopt" type="button">B · The score is a validated measure of how well readers understand the page</button>
+      <button class="qopt" type="button">C · The score cannot go down, so every change is an improvement</button>
+      <button class="qopt" type="button">D · The contrast ratios are estimated by eye</button>
+      <p class="qwhy">The widget prints the weights and calls them a model. The geometry and the WCAG formula are real arithmetic on a constructed page. Both red rungs prove the score can fall.</p>
+    </div>
+
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered</span>
+      <h2>What this session teaches, and where it came from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Every number on the bench</span><span class="note">Computed in the browser from two constructed briefs; an independent Python run of the same steps agrees on all 168 canon values</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">WCAG 2.2, SC 1.4.3 Contrast (Minimum)</span><span class="note">The relative luminance formula, the contrast ratio and the 4.5:1 threshold; read at source</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Mayer and Moreno (2003), spatial contiguity and split attention</span><span class="note">The mechanism behind label distance and lookups; read at source</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">The entry rule and the four-part score</span><span class="note">Stated teaching models printed on the widget, not measured findings</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Wrenmoor Water, Ashbrook Library and both one-pagers</span><span class="note">Constructed for teaching; no number describes a real document</span></div>
+    </div>
+    <p class="mono" style="margin-top:14px">Every fact on this page, and its verification tier, is recorded in the course's source map.</p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Route</b><span>Follow the numbers with a pencil. Count the crossings; compare the length with the shortest order.</span></div>
+      <div class="cheat-item"><b>Labels</b><span>Distance from each part to its name, and how many names live in a key. Both should be small.</span></div>
+      <div class="cheat-item"><b>Contrast</b><span>Every text-on-fill pair, 4.5:1 for normal text. Near misses are still misses.</span></div>
+      <div class="cheat-item"><b>Overlaps</b><span>Nothing sits partly on anything else. Inside a panel is fine.</span></div>
+      <div class="cheat-item"><b>Tidy is not clear</b><span>A neat key moves the work from your page to the reader's eyes.</span></div>
+      <div class="cheat-item"><b>Argue with the score</b><span>Weights are a model. The measurements under them are not.</span></div>
+    </div>
+  </section>
+
+  <div class="callout next">
+    <span class="nx-pill">Next session</span>
+    <p>That is the last session. Go back to session 1's mark audit with your own page, run all six measurements, and redraw it. If your next page is a chart rather than a mechanism, the dataviz course on the hub picks up from here.</p>
+  </div>
+
+  <footer class="pagefoot">
+    <span>Session 6 of 6 · learn-information-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="05-labels-leader-lines-callouts.html">← Prev: Labels, leader lines and callouts</a> &nbsp;·&nbsp; <a href="../index.html">Course home</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/ifd-briefs.js?v=1"></script>
+<script src="../assets/ifd-live.js?v=2"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

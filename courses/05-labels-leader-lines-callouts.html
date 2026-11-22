@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Session 5 of 6. Put the name where the part is: spatial contiguity and split attention read at source, when a key still beats direct labels, eight candidate label positions and why perfect placement is NP-hard, leader-line craft, and the WCAG 2.2 contrast numbers every label and line has to clear.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="Labels, leader lines and callouts - learn information design with phoebe">
+<meta property="og:description" content="Session 5 of 6. Names beside the parts instead of a key across the page, leader lines that cross nothing, one callout that points, and contrast you measure rather than eyeball.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-information-design-with-phoebe/courses/05-labels-leader-lines-callouts.html">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-information-design-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Labels, leader lines and callouts - learn information design with phoebe">
+<meta name="twitter:description" content="Session 5 of 6. Direct labels, eight candidate positions, leader lines that cross nothing, and WCAG 2.2 contrast for text and lines.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-information-design-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Session 5 · Labels, leader lines and callouts - learn information design with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-information-design-with-phoebe</a> / Session 5 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Information Design with Phoebe · Session 5 of 6</div>
+    <h1>Labels, leader lines and <span class="accent">callouts</span></h1>
+    <p class="sub">A cutaway with a lettered key in the corner asks the reader to do the joining: find the letter, cross the page, read the name, come back, find the next letter. Tonight we move every name to the part it names, read the research on why that helps, learn where a label goes when its first spot is taken, draw leader lines that cross nothing, add one callout that earns its place, and check every word and line against the two contrast numbers that WCAG 2.2 sets.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Deeper</span>
+      <span class="chip audience">Anyone who makes a one-page explanation</span>
+      <span class="chip audience">Paper and a pen are enough</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-18 · Contiguity, placement, contrast</span>
+      <span class="a3" style="flex:5">18-40 · Build-along: label Wrenmoor's cutaway</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker">
+      <span class="klabel">Part 0</span>
+      <h2>Where we start</h2>
+    </div>
+    <p class="lede">The running case is constructed. Wrenmoor Water is an invented town water utility, and Nia, its comms lead, now has a redrawn cutaway from session 3 and a chosen form from session 4. One thing survived from the very first draft: a lettered key, A to H, squeezed into the bottom corner. Owen, the engineer at the treatment works, likes the key because "it keeps the drawing clean". Nia has noticed that every visitor at the centre traces the letters with a finger. Tonight she finds out who is right, and why. Wrenmoor, Nia, Owen, Ashbrook Library and every number about their pages are invented for teaching.</p>
+
+    <div class="legend">
+      <span class="pill">🎫 Clear all three quiz questions to stamp your passport</span>
+      <span class="pill">Live = presented in the 45 minutes</span>
+      <span class="pill">Self-study = the full depth, after class</span>
+      <span class="pill">★ Build-along = do it on paper as we go</span>
+    </div>
+
+    <div class="callout win">
+      <p><strong>★ What you walk out with tonight.</strong> The spatial contiguity effect and what it measured, a clear rule for when a key still beats direct labels, the eight candidate positions a label can take and why tools only approximate the best set, six leader-line habits, the two WCAG 2.2 numbers (4.5:1 for text, 3:1 for the lines and parts a reader needs), and Wrenmoor's cutaway labelled on paper with one callout, ready for the bench in session 6.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-1">
+    <div class="section-kicker">
+      <span class="klabel">Part 1 · covers spatial contiguity and split attention</span>
+      <h2>Put the name where the part is</h2>
+      <span class="tag concept">5 min live</span>
+    </div>
+    <p class="lede">A key moves the work of joining a word to a picture from the page to the reader. Every lookup is a small trip: hold a letter in memory, cross the page, find it, read the name, cross back, find the part again. Mayer and Moreno's 2003 review names the cure, read at source: place the words next to the part of the picture they describe.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 528" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The same Wrenmoor cutaway of eight parts drawn twice. Top: parts carry letters A to H and the names sit in a key on the right; three dashed lines show a reader's trips from parts C, E and F up and across to the key. Bottom: the names Reservoir, Intake screen, Mixing tank, Settling tank, Sand filter, Chlorine dose, Storage tank and Your tap sit directly above or below each part, and a note says zero trips to a key.">
+        <defs>
+          <filter id="l5aSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="51" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="l5aHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#AB331C" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="l5aAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#1A2130" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .l5aH { font: 800 12px Inter, sans-serif; fill: #1A2130; }
+          .l5aL { font: 600 12px Inter, sans-serif; fill: #1A2130; }
+          .l5aS { font: 400 11px Inter, sans-serif; fill: #586070; }
+          .l5aB { font: 800 11px Inter, sans-serif; fill: #12505F; }
+          .l5aA { font: 700 11px Inter, sans-serif; fill: #AB331C; }
+          .l5aN { font: 400 12px Inter, sans-serif; fill: #586070; }
+        </style>
+
+        <text class="l5aH" x="30" y="24">ONE CUTAWAY, NAMED TWO WAYS</text>
+        <text class="l5aA" x="40" y="50">A LETTERED KEY · THE READER TRAVELS</text>
+        <text class="l5aA" x="40" y="284">DIRECT LABELS · THE NAME SITS ON THE PART</text>
+
+        <g filter="url(#l5aSk)" fill="none" stroke="#1A2130" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="40" y="60" width="800" height="196" rx="12" transform="rotate(-0.3 440 158)" fill="#FFFFFF"/>
+          <rect x="70" y="130" width="56" height="60" rx="4" transform="rotate(-2 98 160)" fill="#FFFFFF"/>
+          <path d="M74 164 L122 164 L122 186 L74 186 Z" fill="url(#l5aHc)" stroke-width="1.5"/>
+          <rect x="145" y="130" width="56" height="60" rx="4" transform="rotate(1.5 173 160)" fill="#FFFFFF"/>
+          <path d="M157 158 L157 184 M167 158 L167 184 M177 158 L177 184 M187 158 L187 184" stroke-width="1.5"/>
+          <rect x="220" y="130" width="56" height="60" rx="4" transform="rotate(-1.5 248 160)" fill="#FCEFEA"/>
+          <rect x="295" y="130" width="56" height="60" rx="4" transform="rotate(1 323 160)" fill="#FFFFFF"/>
+          <path d="M299 174 L347 174 L347 186 L299 186 Z" fill="url(#l5aHc)" stroke-width="1.5"/>
+          <rect x="370" y="130" width="56" height="60" rx="4" transform="rotate(-1 398 160)" fill="#FCEFEA"/>
+          <path d="M374 166 L422 166 L422 186 L374 186 Z" fill="url(#l5aHc)" stroke-width="1.5"/>
+          <rect x="455" y="146" width="36" height="30" rx="4" transform="rotate(2 473 161)" fill="#FFFFFF"/>
+          <rect x="520" y="130" width="56" height="60" rx="4" transform="rotate(-1.5 548 160)" fill="#FCEFEA"/>
+          <rect x="600" y="140" width="46" height="22" rx="4" transform="rotate(2 623 151)" fill="#FFFFFF"/>
+          <path d="M640 162 L640 178"/>
+          <path d="M127 172 L144 172 M202 172 L219 172 M277 172 L294 172 M352 172 L369 172 M427 172 L454 172 M492 172 L519 172 M577 172 L599 172" stroke="#72C3D4" stroke-width="5"/>
+          <path d="M248 128 L248 84 L688 84" stroke="#AB331C" stroke-width="1.6" stroke-dasharray="5 5"/>
+          <path d="M398 128 L398 96 L688 96" stroke="#AB331C" stroke-width="1.6" stroke-dasharray="5 5"/>
+          <path d="M473 144 L473 108 L688 108" stroke="#AB331C" stroke-width="1.6" stroke-dasharray="5 5"/>
+          <rect x="690" y="72" width="140" height="176" rx="8" transform="rotate(0.3 760 160)" fill="#FCEFEA"/>
+
+          <rect x="40" y="294" width="800" height="196" rx="12" transform="rotate(0.3 440 392)" fill="#FFFFFF"/>
+          <rect x="70" y="362" width="56" height="60" rx="4" transform="rotate(-2 98 392)" fill="#FFFFFF"/>
+          <path d="M74 396 L122 396 L122 418 L74 418 Z" fill="url(#l5aHc)" stroke-width="1.5"/>
+          <rect x="145" y="362" width="56" height="60" rx="4" transform="rotate(1.5 173 392)" fill="#FFFFFF"/>
+          <path d="M157 376 L157 416 M167 376 L167 416 M177 376 L177 416 M187 376 L187 416" stroke-width="1.5"/>
+          <rect x="220" y="362" width="56" height="60" rx="4" transform="rotate(-1.5 248 392)" fill="#FCEFEA"/>
+          <rect x="295" y="362" width="56" height="60" rx="4" transform="rotate(1 323 392)" fill="#FFFFFF"/>
+          <path d="M299 406 L347 406 L347 418 L299 418 Z" fill="url(#l5aHc)" stroke-width="1.5"/>
+          <rect x="370" y="362" width="56" height="60" rx="4" transform="rotate(-1 398 392)" fill="#FCEFEA"/>
+          <path d="M374 398 L422 398 L422 418 L374 418 Z" fill="url(#l5aHc)" stroke-width="1.5"/>
+          <rect x="455" y="378" width="36" height="30" rx="4" transform="rotate(2 473 393)" fill="#FFFFFF"/>
+          <rect x="520" y="362" width="56" height="60" rx="4" transform="rotate(-1.5 548 392)" fill="#FCEFEA"/>
+          <rect x="600" y="372" width="46" height="22" rx="4" transform="rotate(2 623 383)" fill="#FFFFFF"/>
+          <path d="M640 394 L640 410"/>
+          <path d="M127 404 L144 404 M202 404 L219 404 M277 404 L294 404 M352 404 L369 404 M427 404 L454 404 M492 404 L519 404 M577 404 L599 404" stroke="#72C3D4" stroke-width="5"/>
+          <rect x="680" y="330" width="148" height="120" rx="10" transform="rotate(-0.5 754 390)" fill="#E3F3F7" stroke="#12505F"/>
+        </g>
+
+        <text class="l5aH" x="98" y="150" text-anchor="middle">A</text>
+        <text class="l5aH" x="173" y="150" text-anchor="middle">B</text>
+        <text class="l5aH" x="248" y="164" text-anchor="middle">C</text>
+        <text class="l5aH" x="323" y="150" text-anchor="middle">D</text>
+        <text class="l5aH" x="398" y="150" text-anchor="middle">E</text>
+        <text class="l5aH" x="473" y="165" text-anchor="middle">F</text>
+        <text class="l5aH" x="548" y="164" text-anchor="middle">G</text>
+        <text class="l5aH" x="623" y="156" text-anchor="middle">H</text>
+
+        <text class="l5aH" x="704" y="92">KEY</text>
+        <text class="l5aS" x="704" y="112">A  Reservoir</text>
+        <text class="l5aS" x="704" y="128">B  Intake screen</text>
+        <text class="l5aS" x="704" y="144">C  Mixing tank</text>
+        <text class="l5aS" x="704" y="160">D  Settling tank</text>
+        <text class="l5aS" x="704" y="176">E  Sand filter</text>
+        <text class="l5aS" x="704" y="192">F  Chlorine dose</text>
+        <text class="l5aS" x="704" y="208">G  Storage tank</text>
+        <text class="l5aS" x="704" y="224">H  Your tap</text>
+
+        <text class="l5aS" x="60" y="226">Each dashed line is a trip: find the letter, cross to the key, read, come back.</text>
+        <text class="l5aS" x="60" y="242">Three trips drawn; a reader naming all eight parts makes eight.</text>
+
+        <text class="l5aL" x="98" y="352" text-anchor="middle">Reservoir</text>
+        <text class="l5aL" x="248" y="352" text-anchor="middle">Mixing tank</text>
+        <text class="l5aL" x="398" y="352" text-anchor="middle">Sand filter</text>
+        <text class="l5aL" x="548" y="352" text-anchor="middle">Storage tank</text>
+        <text class="l5aL" x="173" y="442" text-anchor="middle">Intake screen</text>
+        <text class="l5aL" x="323" y="442" text-anchor="middle">Settling tank</text>
+        <text class="l5aL" x="473" y="442" text-anchor="middle">Chlorine dose</text>
+        <text class="l5aL" x="623" y="442" text-anchor="middle">Your tap</text>
+
+        <text class="l5aB" x="694" y="356">0 trips to a key</text>
+        <text class="l5aS" x="694" y="376">the name is where</text>
+        <text class="l5aS" x="694" y="392">the eye already is</text>
+        <text class="l5aS" x="694" y="416">no letter to hold</text>
+        <text class="l5aS" x="694" y="432">in memory</text>
+
+        <text class="l5aN" x="30" y="516">Session 6 measures this on Wrenmoor: mean label distance 443.8 px to 21.3 px, lookups 8 to 0.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - a key turns every name into a trip across the page; a direct label puts the name where the eye already is</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The spatial contiguity effect, read at source<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Among their nine ways to reduce cognitive load, Mayer and Moreno (2003) list "aligning words and pictures": put printed text next to the part of the graphic it describes. They call the gain the <strong>spatial contiguity effect</strong>. The effect size they report is .48, from a single study (Moreno and Mayer 1999, Experiment 1), and they note that "similar effects have been found with text and illustrations in books". One study is a reason to act, not a law: the direction is clear, the size is one measurement.</p>
+        <p>They define the bad version by example: on-screen text at the bottom of the screen, the graphic at the top. That is exactly a key in the corner. The reader has to scan back and forth, and the scanning uses the same limited attention the explanation needs.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Split attention and what eyes do<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two older lines of work sit behind the effect, both reported here through Mayer and Moreno rather than read at source. Sweller named the cost the <strong>split-attention effect</strong>: when words and picture are separated, the reader has to hold one while searching the other. Hegarty and Just (1989) recorded eye movements and found that learners read a portion of the text, then look at the matching part of the graphic. Readers already try to join word to part; a key makes each join a journey.</p>
+        <p>Session 6 measures the journey on Wrenmoor's page. With direct labels, the mean distance from a name to its part falls from 443.8 px to 21.3 px and the number of lookups falls from 8 to 0. Those are bench numbers from a constructed page, measured with a stated model, not readers' eyes.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>When a key is the right call<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Direct labels are the default, not a rule without exceptions. A key earns its place in two situations:</p>
+        <ul>
+          <li><strong>One symbol repeats many times.</strong> A map with forty campsites does not print "campsite" forty times; one tent symbol and one line in the key do it once. The lookup happens once, and then the reader knows the symbol everywhere.</li>
+          <li><strong>The parts are too dense to name in place.</strong> An exploded view of a gearbox with sixty small parts has no room beside each one. Numbered callouts with a parts list are the honest answer, and the list should sit as close to the drawing as the page allows.</li>
+        </ul>
+        <p>Wrenmoor's cutaway has eight different parts, each appearing once, with room around every one. Neither condition holds, so the key goes. Owen's worry about a cluttered drawing is real, and Part 2 answers it: placement and leader-line habits keep direct labels tidy.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Transit maps.</strong> Station names sit beside the station dot, on the map itself, because a rider looking for a stop is already looking at the line. The line colours, which repeat across hundreds of stations, are the part that gets a key. The same page uses both, each where it belongs.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-2">
+    <div class="section-kicker">
+      <span class="klabel">Part 2 · covers label placement and leader lines</span>
+      <h2>Where a label goes, and how its line behaves</h2>
+      <span class="tag concept">6 min live</span>
+    </div>
+    <p class="lede">Moving names onto the drawing raises the next question: which side of the part? Cartographers have worked on this for a long time, because a map is mostly labels. Their answer is a small set of candidate positions around each point, a preference among them, and a scoring rule for when labels collide.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 386" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Left: a point with eight candidate label boxes around it: above left, above, above right, left, right, below left, below, below right. The right box is highlighted as first choice. Right top: a good example, two labels beside a settling tank with short leader lines ending in a dot on the part. Right bottom, marked wrong way: labels far from the tank, leader lines bent twice, crossing each other and ending in arrowheads.">
+        <defs>
+          <filter id="l5bSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="63" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="l5bHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#AB331C" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="l5bAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#1A2130" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .l5bH { font: 800 12px Inter, sans-serif; fill: #1A2130; }
+          .l5bL { font: 600 12px Inter, sans-serif; fill: #1A2130; }
+          .l5bS { font: 400 11px Inter, sans-serif; fill: #586070; }
+          .l5bB { font: 800 11px Inter, sans-serif; fill: #12505F; }
+          .l5bA { font: 700 11px Inter, sans-serif; fill: #AB331C; }
+          .l5bR { font: 700 11px Inter, sans-serif; fill: #991B1B; }
+          .l5bN { font: 400 12px Inter, sans-serif; fill: #586070; }
+        </style>
+
+        <text class="l5bH" x="30" y="24">WHERE A POINT'S NAME CAN GO, AND HOW ITS LINE BEHAVES</text>
+        <text class="l5bA" x="50" y="54">EIGHT CANDIDATE POSITIONS AROUND ONE POINT</text>
+        <text class="l5bA" x="500" y="54">RIGHT WAY · SHORT, STRAIGHT, ENDS IN A DOT</text>
+        <text class="l5bR" x="500" y="214">WRONG WAY · FAR, BENT TWICE, CROSSING, ARROWHEADS</text>
+
+        <g filter="url(#l5bSk)" fill="none" stroke="#1A2130" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="50" y="110" width="120" height="28" rx="6" transform="rotate(-0.6 110 124)" fill="#FFFFFF" stroke-dasharray="4 4"/>
+          <rect x="180" y="110" width="120" height="28" rx="6" transform="rotate(0.5 240 124)" fill="#FFFFFF" stroke-dasharray="4 4"/>
+          <rect x="310" y="110" width="160" height="28" rx="6" transform="rotate(-0.4 390 124)" fill="#FFFFFF" stroke-dasharray="4 4"/>
+          <rect x="50" y="150" width="120" height="28" rx="6" transform="rotate(0.5 110 164)" fill="#FFFFFF" stroke-dasharray="4 4"/>
+          <rect x="310" y="150" width="160" height="28" rx="6" transform="rotate(-0.5 390 164)" fill="#E3F3F7" stroke="#12505F"/>
+          <rect x="50" y="190" width="120" height="28" rx="6" transform="rotate(-0.4 110 204)" fill="#FFFFFF" stroke-dasharray="4 4"/>
+          <rect x="180" y="190" width="120" height="28" rx="6" transform="rotate(0.6 240 204)" fill="#FFFFFF" stroke-dasharray="4 4"/>
+          <rect x="310" y="190" width="160" height="28" rx="6" transform="rotate(0.4 390 204)" fill="#FFFFFF" stroke-dasharray="4 4"/>
+          <circle cx="240" cy="164" r="6" fill="#1A2130"/>
+
+          <rect x="500" y="64" width="340" height="126" rx="10" transform="rotate(0.4 670 127)" fill="#FFFFFF"/>
+          <rect x="540" y="86" width="90" height="80" rx="4" transform="rotate(-1 585 126)" fill="#FCEFEA"/>
+          <path d="M546 146 L624 146 L624 160 L546 160 Z" fill="url(#l5bHc)" stroke-width="1.5"/>
+          <circle cx="600" cy="104" r="3.5" fill="#1A2130"/>
+          <path d="M600 104 L678 104"/>
+          <circle cx="580" cy="153" r="3.5" fill="#1A2130"/>
+          <path d="M580 153 L640 153 L678 172"/>
+
+          <rect x="500" y="224" width="340" height="126" rx="10" transform="rotate(-0.4 670 287)" fill="#FEF2F2" stroke="#FCA5A5"/>
+          <rect x="530" y="250" width="80" height="76" rx="4" transform="rotate(1 570 288)" fill="#FFFFFF"/>
+          <path d="M536 306 L604 306 L604 320 L536 320 Z" fill="url(#l5bHc)" stroke-width="1.5"/>
+          <path d="M724 246 L676 246 L676 336 L614 292" marker-end="url(#l5bAr)"/>
+          <path d="M724 332 L650 332 L650 270 L614 270" marker-end="url(#l5bAr)"/>
+        </g>
+
+        <text class="l5bS" x="110" y="128" text-anchor="middle">above left</text>
+        <text class="l5bS" x="240" y="128" text-anchor="middle">above</text>
+        <text class="l5bS" x="390" y="128" text-anchor="middle">above right</text>
+        <text class="l5bS" x="110" y="168" text-anchor="middle">left</text>
+        <text class="l5bB" x="390" y="168" text-anchor="middle">first choice: right</text>
+        <text class="l5bS" x="110" y="208" text-anchor="middle">below left</text>
+        <text class="l5bS" x="240" y="208" text-anchor="middle">below</text>
+        <text class="l5bS" x="390" y="208" text-anchor="middle">below right</text>
+
+        <text class="l5bS" x="50" y="248">Standards rank a finite set, typically eight, by preference.</text>
+        <text class="l5bS" x="50" y="266">Imhof (reported): right of the point first, where space allows.</text>
+        <text class="l5bS" x="50" y="284">Fall back round the ring only where right would cover something.</text>
+        <text class="l5bS" x="50" y="302">Score = overlaps + position preference + points left unlabelled.</text>
+        <text class="l5bS" x="50" y="320">Finding the best set is NP-hard, so tools approximate.</text>
+
+        <text class="l5bL" x="684" y="108">Settling tank</text>
+        <text class="l5bL" x="684" y="176">Floc layer</text>
+        <text class="l5bL" x="730" y="250">Settling tank</text>
+        <text class="l5bL" x="730" y="336">Floc layer</text>
+
+        <text class="l5bN" x="30" y="374">Leader-line rules are working practice, not a measured finding: short, one bend at most, a dot, no arrow.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - try right of the part first, move round the ring only when right would cover something, and keep every leader line short and uncrossed</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Eight positions, one preference, one score<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Christensen, Marks and Shieber (1995, read as the MERL technical report TR94-12) set out how cartographic standards treat a point's label. There is a finite set of candidate positions, typically eight around the point, with a ranking of how desirable each one is. A placement is judged on three things together: how much the labels overlap map features and each other, how far each label sits from its preferred position, and how many points are left unlabelled. That scoring idea goes back to Yoeli (1972).</p>
+        <p>Imhof's 1975 paper "Positioning names on maps" (reported, from secondary summaries) gives the principles behind the preference: names legible, clearly tied to their feature, not covering other content, and for a point, where space allows, the name begins to the right of the symbol. That is the one position preference we rely on. Christensen and colleagues also note that Imhof's analysis is "descriptive, not prescriptive": it records good practice rather than proving an order.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why no tool gets it perfect<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Finding the best placement for every label at once is NP-hard (Marks and Shieber, 1991, cited in the same paper): there is no known shortcut that guarantees the best answer as the number of labels grows. Software therefore approximates, and hand-placing the awkward ones is normal professional practice, not a failure of the tool. Before automation, cartographers placed labels at 20 to 30 per hour (Cook and Jones, 1990, reported in that paper). Eight labels on a one-pager is a few minutes of careful work, and it is worth it.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Six leader-line habits<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>When a name cannot sit right against its part, a leader line joins them. These habits are working practice across technical illustration and cartography, stated here as craft with no study behind them:</p>
+        <ul>
+          <li><strong>Short.</strong> The leader is a fallback, not a licence to park labels in a neat column far away; that rebuilds the key one line at a time.</li>
+          <li><strong>Straight, or one bend.</strong> A second bend makes the eye follow a route instead of a pointer.</li>
+          <li><strong>Never crossing another line or a word.</strong> A crossing is a moment where the reader can follow the wrong line.</li>
+          <li><strong>Ends on the part, with a dot.</strong> The dot says "this part", inside its outline; an end in empty space points at nothing.</li>
+          <li><strong>No arrowhead on a label line.</strong> On an explainer, arrows already mean flow or sequence (session 2). An arrowhead on a label reads as "water goes here".</li>
+          <li><strong>Horizontal text.</strong> Turn the line, never the words; rotated names slow reading.</li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>The appliance diagram.</strong> The best "parts of your coffee machine" diagrams put each name right beside the part with a hairline leader ending in a small dot, all text horizontal, no arrowheads. The weaker ones run every leader out to a tidy column on one side, and the lines fan and cross until the reader has to trace them with a finger, which is the key again in disguise.</p>
+    </div>
+  </section>
+
+  <section class="section" id="part-3">
+    <div class="section-kicker">
+      <span class="klabel">Part 3 · covers callouts as signals and contrast</span>
+      <h2>Callouts point, contrast lets them be read</h2>
+      <span class="tag concept">4 min live</span>
+    </div>
+    <p class="lede">A label names a part. A callout says something about one part: a numbered or boxed note tied to it with a short leader. In Mayer and Moreno's terms a callout is a signal, a cue that tells the reader what to select. Signals work by being rare, and every label, line and callout only works if it can be seen against what is behind it.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 352" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Left: five text-on-fill swatches, each with its measured contrast printed beside it. White on cyan 2.01 to 1, fails. Faint grey on tint 1.27 to 1, fails. Vermilion on soft pink 4.45 to 1 and muted grey on soft pink 4.31 to 1, both fail narrowly. Ink on cyan passes 4.5 to 1. Right: a muted leader line on white passes 3 to 1, a faint one fails, and a box gives the WCAG 2.2 contrast formula and thresholds.">
+        <defs>
+          <filter id="l5cSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="77" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="l5cHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#AB331C" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="l5cAr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#1A2130" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .l5cH { font: 800 12px Inter, sans-serif; fill: #1A2130; }
+          .l5cL { font: 600 12px Inter, sans-serif; fill: #1A2130; }
+          .l5cS { font: 400 11px Inter, sans-serif; fill: #586070; }
+          .l5cB { font: 800 11px Inter, sans-serif; fill: #12505F; }
+          .l5cA { font: 700 11px Inter, sans-serif; fill: #AB331C; }
+          .l5cN { font: 400 12px Inter, sans-serif; fill: #586070; }
+        </style>
+
+        <text class="l5cH" x="30" y="24">MEASURED RATIOS, PRINTED BESIDE THE SWATCH</text>
+        <text class="l5cA" x="40" y="52">TEXT ON A FILL · NORMAL TEXT NEEDS 4.5:1</text>
+        <text class="l5cA" x="510" y="52">LINES AND PART OUTLINES · 3:1</text>
+
+        <g filter="url(#l5cSk)" fill="none" stroke="#1A2130" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="50" y="66" width="120" height="34" rx="6" transform="rotate(-0.6 110 83)" fill="#72C3D4"/>
+          <rect x="70" y="79" width="80" height="8" rx="2" fill="#FFFFFF" stroke="none"/>
+          <rect x="50" y="118" width="120" height="34" rx="6" transform="rotate(0.5 110 135)" fill="#FCEFEA"/>
+          <rect x="70" y="131" width="80" height="8" rx="2" fill="#D5D8DF" stroke="none"/>
+          <rect x="50" y="170" width="120" height="34" rx="6" transform="rotate(-0.4 110 187)" fill="#F3CDC2"/>
+          <rect x="70" y="183" width="80" height="8" rx="2" fill="#AB331C" stroke="none"/>
+          <rect x="50" y="222" width="120" height="34" rx="6" transform="rotate(0.6 110 239)" fill="#F3CDC2"/>
+          <rect x="70" y="235" width="80" height="8" rx="2" fill="#586070" stroke="none"/>
+          <rect x="50" y="274" width="120" height="34" rx="6" transform="rotate(-0.5 110 291)" fill="#72C3D4"/>
+          <rect x="70" y="287" width="80" height="8" rx="2" fill="#1A2130" stroke="none"/>
+
+          <rect x="520" y="66" width="120" height="34" rx="6" transform="rotate(0.5 580 83)" fill="#FFFFFF"/>
+          <path d="M534 83 L626 83" stroke="#586070" stroke-width="3"/>
+          <rect x="520" y="118" width="120" height="34" rx="6" transform="rotate(-0.5 580 135)" fill="#FFFFFF"/>
+          <path d="M534 135 L626 135" stroke="#D5D8DF" stroke-width="3"/>
+          <rect x="520" y="176" width="316" height="132" rx="10" transform="rotate(-0.4 678 242)" fill="#E3F3F7" stroke="#12505F"/>
+        </g>
+
+        <text class="l5cL" x="186" y="80">White on cyan #72C3D4</text>
+        <text class="l5cS" x="186" y="96">2.01:1 · fails · Wrenmoor steps 2 and 5</text>
+        <text class="l5cL" x="186" y="132">Faint grey caption on tint</text>
+        <text class="l5cS" x="186" y="148">1.27:1 · fails · Wrenmoor's drawing caption</text>
+        <text class="l5cL" x="186" y="184">Vermilion on soft pink</text>
+        <text class="l5cS" x="186" y="200">4.45:1 · fails by a hair · Ashbrook</text>
+        <text class="l5cL" x="186" y="236">Muted grey on soft pink</text>
+        <text class="l5cS" x="186" y="252">4.31:1 · fails by a hair · Ashbrook</text>
+        <text class="l5cL" x="186" y="288">Ink on cyan, the fix</text>
+        <text class="l5cS" x="186" y="304">passes 4.5:1 · ink, never white, on cyan</text>
+
+        <text class="l5cL" x="656" y="80">Muted leader on white</text>
+        <text class="l5cS" x="656" y="96">passes 3:1</text>
+        <text class="l5cL" x="656" y="132">Faint leader on white</text>
+        <text class="l5cS" x="656" y="148">fails 3:1, line drops out</text>
+
+        <text class="l5cB" x="536" y="200">WCAG 2.2, THE TWO NUMBERS</text>
+        <text class="l5cL" x="536" y="222">ratio = (L1 + 0.05) / (L2 + 0.05)</text>
+        <text class="l5cS" x="536" y="242">L1 lighter, L2 darker relative luminance</text>
+        <text class="l5cS" x="536" y="262">1.4.3 text 4.5:1; large text 3:1</text>
+        <text class="l5cS" x="536" y="280">large = 18 pt, or 14 pt bold</text>
+        <text class="l5cS" x="536" y="298">1.4.11 graphic parts you need: 3:1</text>
+
+        <text class="l5cN" x="30" y="340">"Looks readable" is not a ratio: both Ashbrook pairs look fine on screen and both fail.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the bar inside each swatch stands for the text colour; the ratio is printed beside it, never on it, so every word you read here passes</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>A callout is a signal, so ration it<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Mayer and Moreno's signaling method covers cues that tell the learner what to select and how to organise it: stressed key words, arrows, headings. A callout does the same job on a page. It has four parts: a number badge, a short leader to the part, a box, and one sentence. The sentence says something the label cannot, usually why the part matters to the reader.</p>
+        <p>Signals stop working when everything is signalled. One or two callouts per page is a working limit, a craft judgement rather than a measured threshold. If Nia wants five callouts, the page is trying to be two pages. How much visual weight a callout box should carry against the rest of the page is a hierarchy question, and <a href="https://phoebefu6.github.io/learn-dashboard-design-with-phoebe/courses/02-hierarchy-first-glance.html">learn-dashboard-design session 2</a> owns visual weight; here we own what the callout says and where it points.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The two contrast numbers, read at source<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>WCAG 2.2 success criterion 1.4.3 (level AA) asks for a contrast ratio of at least <strong>4.5:1</strong> for text, and <strong>3:1</strong> for large text, defined as at least 18 point, or 14 point bold. The ratio is (L1 + 0.05) / (L2 + 0.05), where L1 is the relative luminance of the lighter colour and L2 of the darker one; relative luminance weights red, green and blue as 0.2126, 0.7152 and 0.0722 after an sRGB linearisation step. Text that is pure decoration or part of a logo has no requirement.</p>
+        <p>Success criterion 1.4.11 (level AA) asks for <strong>3:1</strong> against adjacent colours for "parts of graphics required to understand the content". On an explainer, that covers the leader lines and the part outlines that carry meaning. A faint hairline leader can be elegant and still fail: if the reader needs the line to join the name to the part, the line has to clear 3:1.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Wrenmoor's and Ashbrook's misses<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Nia's draft (constructed) set steps 2 and 5 in white on the pale cyan #72C3D4: 2.01:1, well under 4.5:1. The caption under the drawing was the faint grey #D5D8DF on the pale tint #FCEFEA: 1.27:1. The fix is not a new colour scheme; it is the rule on the palette itself: text on cyan is ink, and captions use the muted grey, not the faint one.</p>
+        <p>Ashbrook Library's draft (also constructed) is the more instructive one. Vermilion #AB331C on the soft pink #F3CDC2 measures 4.45:1 and muted grey #586070 on the same pink measures 4.31:1. Both look perfectly readable on a good screen, and both fail. That is the point: you check contrast with the formula or a checker, not by eye. Choosing a palette is a colour-theory question owned by <a href="https://phoebefu6.github.io/learn-dataviz-with-phoebe/">learn-dataviz</a>; here we only check that the words and lines we placed can be read.</p>
+      </div>
+    </details>
+
+    <div class="callout example">
+      <span class="ex-pill">Real world</span>
+      <p><strong>Museum object labels.</strong> Good galleries put a short label right beside each object and save one larger panel for the single idea the room is about. That panel is the callout. When a gallery tries to make every case a feature, visitors read none of them, and pale grey text on a coloured wall is the most common reason a well-written label goes unread.</p>
+    </div>
+  </section>
+
+  <section class="section" id="demo-1">
+    <div class="section-kicker">
+      <span class="klabel">Build-along</span>
+      <h2>Label Wrenmoor's cutaway on paper</h2>
+      <span class="tag demo">★ 22 min · everyone builds</span>
+    </div>
+    <p class="lede">Take Nia's cutaway from session 3 (constructed), or sketch eight boxes in two rows if you missed it. Remove the key, place each name in its first-choice position, fall back only where you must, draw leader lines that cross nothing, add one callout at the chlorine dose, then check every colour. If you have your own one-pager, label it the same way alongside.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 416" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Wrenmoor's cutaway in two rows joined by a pipe. Top row left to right: Reservoir, Intake screen, Mixing tank, Settling tank, each named to its right. The pipe drops to the bottom row, which runs right to left: Sand filter named to its right, Chlorine dose named above with a short leader ending in a dot, Storage tank named to its right, Your tap named above. Callout number 1 sits below the chlorine dose, tied to a box: why tap water can smell of chlorine. A check list notes that names pass 4.5 to 1 and lines pass 3 to 1.">
+        <defs>
+          <filter id="l5dSk" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="89" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/></filter>
+          <pattern id="l5dHc" patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(-38)"><line x1="0" y1="0" x2="0" y2="7" stroke="#AB331C" stroke-width="1" opacity=".5"/></pattern>
+          <marker id="l5dAr" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#1A2130" stroke-width="1.6" stroke-linecap="round"/></marker>
+        </defs>
+        <style>
+          .l5dH { font: 800 12px Inter, sans-serif; fill: #1A2130; }
+          .l5dL { font: 600 12px Inter, sans-serif; fill: #1A2130; }
+          .l5dS { font: 400 11px Inter, sans-serif; fill: #586070; }
+          .l5dA { font: 700 11px Inter, sans-serif; fill: #AB331C; }
+          .l5dW { font: 800 12px Inter, sans-serif; fill: #FFFFFF; }
+          .l5dN { font: 400 12px Inter, sans-serif; fill: #586070; }
+        </style>
+
+        <text class="l5dH" x="30" y="24">WRENMOOR'S CUTAWAY, NAMED WHERE THE PARTS ARE</text>
+
+        <g filter="url(#l5dSk)" fill="none" stroke="#1A2130" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="50" y="60" width="70" height="60" rx="4" transform="rotate(-1.5 85 90)" fill="#FFFFFF"/>
+          <path d="M55 92 L115 92 L115 114 L55 114 Z" fill="url(#l5dHc)" stroke-width="1.5"/>
+          <rect x="250" y="60" width="70" height="60" rx="4" transform="rotate(1 285 90)" fill="#FFFFFF"/>
+          <path d="M264 72 L264 112 M278 72 L278 112 M292 72 L292 112 M306 72 L306 112" stroke-width="1.5"/>
+          <rect x="450" y="60" width="70" height="60" rx="4" transform="rotate(-1 485 90)" fill="#FCEFEA"/>
+          <path d="M485 68 L485 100 M472 100 L498 100" stroke-width="1.5"/>
+          <rect x="650" y="60" width="70" height="60" rx="4" transform="rotate(1.2 685 90)" fill="#FFFFFF"/>
+          <path d="M655 98 L715 98 L715 114 L655 114 Z" fill="url(#l5dHc)" stroke-width="1.5"/>
+          <path d="M122 108 L246 108" stroke="#72C3D4" stroke-width="5" marker-end="url(#l5dAr)"/>
+          <path d="M322 108 L446 108" stroke="#72C3D4" stroke-width="5" marker-end="url(#l5dAr)"/>
+          <path d="M522 108 L646 108" stroke="#72C3D4" stroke-width="5" marker-end="url(#l5dAr)"/>
+          <path d="M700 122 L700 206" stroke="#72C3D4" stroke-width="5" marker-end="url(#l5dAr)"/>
+
+          <rect x="650" y="210" width="70" height="60" rx="4" transform="rotate(-1 685 240)" fill="#FCEFEA"/>
+          <path d="M655 240 L715 240 L715 264 L655 264 Z" fill="url(#l5dHc)" stroke-width="1.5"/>
+          <rect x="470" y="244" width="36" height="24" rx="4" transform="rotate(2 488 256)" fill="#FFFFFF"/>
+          <rect x="250" y="210" width="70" height="60" rx="4" transform="rotate(1 285 240)" fill="#FCEFEA"/>
+          <rect x="60" y="244" width="60" height="22" rx="4" transform="rotate(-2 90 255)" fill="#FFFFFF"/>
+          <path d="M108 266 L108 282"/>
+          <path d="M648 256 L510 256" stroke="#72C3D4" stroke-width="5" marker-end="url(#l5dAr)"/>
+          <path d="M468 256 L324 256" stroke="#72C3D4" stroke-width="5" marker-end="url(#l5dAr)"/>
+          <path d="M248 256 L124 256" stroke="#72C3D4" stroke-width="5" marker-end="url(#l5dAr)"/>
+
+          <path d="M488 216 L488 240"/>
+          <circle cx="488" cy="243" r="3.5" fill="#1A2130"/>
+          <path d="M488 288 L488 272"/>
+          <circle cx="488" cy="269" r="3.5" fill="#1A2130"/>
+          <rect x="520" y="284" width="320" height="76" rx="10" transform="rotate(-0.5 680 322)" fill="#E3F3F7" stroke="#12505F"/>
+        </g>
+
+        <circle cx="488" cy="300" r="11" fill="#AB331C"/>
+        <text class="l5dW" x="488" y="304" text-anchor="middle">1</text>
+
+        <text class="l5dL" x="132" y="84">Reservoir</text>
+        <text class="l5dL" x="332" y="84">Intake screen</text>
+        <text class="l5dL" x="532" y="84">Mixing tank</text>
+        <text class="l5dL" x="732" y="84">Settling tank</text>
+        <text class="l5dL" x="732" y="234">Sand filter</text>
+        <text class="l5dL" x="488" y="210" text-anchor="middle">Chlorine dose</text>
+        <text class="l5dL" x="332" y="234">Storage tank</text>
+        <text class="l5dL" x="90" y="236" text-anchor="middle">Your tap</text>
+
+        <text class="l5dL" x="536" y="306">1 · Why tap water can smell of chlorine</text>
+        <text class="l5dS" x="536" y="326">A little chlorine is left in on purpose,</text>
+        <text class="l5dS" x="536" y="344">so the water stays safe on its way to you.</text>
+
+        <text class="l5dA" x="50" y="320">THE CONTRAST CHECK</text>
+        <text class="l5dS" x="50" y="340">names: ink on paper, passes 4.5:1</text>
+        <text class="l5dS" x="50" y="358">leader lines: ink, passes 3:1</text>
+        <text class="l5dS" x="50" y="376">callout text: ink and grey on cyan tint, passes</text>
+
+        <text class="l5dN" x="30" y="404">Two names fall back to above, Chlorine dose and Your tap, because the pipe runs through their right side.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - six names sit right of their part, two fall back above with a dotted-end leader, and one numbered callout says why the chlorine dose matters to the reader</figcaption>
+    </figure>
+
+    <div class="steps">
+      <div class="step">
+        <p><strong>List the parts and remove the key.</strong> Write the eight names in flow order. Then cross out the key box on the draft with a single line; you are replacing it, not adding to it.</p>
+        <div class="prompt-box good"><span class="label">★ Step 1 · the parts</span>1 Reservoir        5 Sand filter
+2 Intake screen    6 Chlorine dose
+3 Mixing tank      7 Storage tank
+4 Settling tank    8 Your tap
+
+Key A to H: removed. Each part appears once, room around each:
+neither "repeated symbol" nor "too dense" applies.</div>
+      </div>
+      <div class="step">
+        <p><strong>Place every name in its first-choice position.</strong> Right of the part, starting just clear of its edge, text horizontal. Do all eight before you fix any collision, so you can see the whole problem at once.</p>
+        <div class="prompt-box good"><span class="label">★ Step 2 · first choice: right</span>for each part:
+  start the name just right of the part's edge
+  align it with the part's upper half
+  keep it horizontal
+then look: which names now cover a pipe, a part or another name?</div>
+      </div>
+      <div class="step">
+        <p><strong>Fall back round the eight positions where a name covers something.</strong> On Wrenmoor's cutaway the pipe runs straight through the right side of the chlorine dose and the tap. Try the next positions in turn and take the first one that covers nothing.</p>
+        <div class="prompt-box good"><span class="label">★ Step 3 · fall back</span>Chlorine dose   right covers the pipe   -&gt; above
+Your tap        right covers the pipe   -&gt; above
+the other six   right is clear          -&gt; keep right
+
+Score yourself the cartographer's way:
+  overlaps (aim 0) + moved from first choice (2 here) + unlabelled (0)</div>
+      </div>
+      <div class="step">
+        <p><strong>Draw leader lines only where a name is not touching its part.</strong> Short, straight or one bend, ending in a dot on the part, no arrowhead. Check each line against every other line and every word.</p>
+        <div class="prompt-box good"><span class="label">★ Step 4 · leader lines</span>Chlorine dose   name above, gap of a few mm
+                -&gt; one straight vertical line, dot on the part
+the rest        name touches the part: no leader needed
+
+Check: does any line cross another line?   no
+       does any line pass through a word?  no
+       any arrowheads on label lines?      no</div>
+      </div>
+      <div class="step">
+        <p><strong>Add one callout, at the chlorine dose.</strong> A number badge just below the part, a short leader to it, and a box with the same number and one sentence. The sentence answers a question a resident actually asks.</p>
+        <div class="prompt-box good"><span class="label">★ Step 5 · one callout</span>badge   1, below the chlorine dose, short leader with a dot
+box     1 · Why tap water can smell of chlorine
+        "A little chlorine is left in on purpose,
+         so the water stays safe on its way to you."
+count   callouts on the page: 1   (working limit: one or two)</div>
+      </div>
+      <div class="step">
+        <p><strong>Check every text and line colour.</strong> List each pair of foreground and background you used and check it with a contrast checker or the formula. Text needs 4.5:1, large text 3:1, and any line or outline the reader needs to understand the page needs 3:1.</p>
+        <div class="prompt-box good"><span class="label">★ Step 6 · contrast</span>names         ink on paper              text, needs 4.5:1
+callout text  ink and grey on cyan tint text, needs 4.5:1
+leader lines  ink on paper              graphic part, needs 3:1
+part outlines ink on paper              graphic part, needs 3:1
+step boxes    ink, never white, on cyan the old 2.01:1 pair, fixed
+caption       muted grey, not faint     the old 1.27:1 pair, fixed</div>
+      </div>
+    </div>
+
+    <div class="callout tip">
+      <p><strong>Show Owen the before and after side by side.</strong> His worry was clutter. Put the two versions next to each other and ask him to name the sand filter on each. On the keyed version he will look for E; on the labelled one he will already be reading the name. That is usually the end of the argument, and session 6 puts numbers on it.</p>
+    </div>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker">
+      <span class="klabel">Homework</span>
+      <h2>Before session 6</h2>
+      <span class="tag exercise">30 min</span>
+    </div>
+    <ol>
+      <li><strong>Count the trips on a real page.</strong> Find a diagram with a key or legend. Count how many lookups a reader makes to name every part, and decide whether the key is justified: one symbol repeated many times, or parts too dense to name in place.</li>
+      <li><strong>Relabel your own one-pager.</strong> Move every name to its part, first choice right, falling back round the eight positions only where you must. Write down how many names moved from first choice.</li>
+      <li><strong>Audit your leader lines.</strong> Mark every crossing, every arrowhead on a label line, every leader with two bends or more, and every rotated name. Fix each one.</li>
+      <li><strong>Measure three colour pairs.</strong> Pick the three text-on-fill pairs on your page that look weakest and check them against 4.5:1 with a contrast checker. Check one leader line against 3:1. Bring the numbers to session 6.</li>
+    </ol>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker">
+      <span class="klabel">Check yourself</span>
+      <h2>Three questions</h2>
+    </div>
+    <p>Clear all three and session 5 gets stamped in your passport.</p>
+
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Owen wants to keep the lettered key on Wrenmoor's cutaway. When would a key genuinely beat direct labels?</p>
+      <button class="qopt" type="button">A · Whenever the drawing would look cleaner without words on it</button>
+      <button class="qopt" type="button">B · When one symbol repeats many times, or the parts are too dense to name in place</button>
+      <button class="qopt" type="button">C · Whenever the page has more than five parts</button>
+      <button class="qopt" type="button">D · Never; Mayer and Moreno showed keys always fail</button>
+      <p class="qwhy">A key makes every name a lookup, which is the split attention Mayer and Moreno describe. It pays off when one lookup serves many repeats of a symbol, or when there is no room beside the parts. Wrenmoor has eight different parts, each once, with room around them, so direct labels win.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="3">
+      <p class="qtext">2 · What does WCAG 2.2 ask for normal text, and for the lines and part outlines a reader needs to understand a graphic?</p>
+      <button class="qopt" type="button">A · 3:1 for text, 4.5:1 for graphic parts</button>
+      <button class="qopt" type="button">B · 7:1 for both</button>
+      <button class="qopt" type="button">C · 4.5:1 for text; graphic parts have no requirement</button>
+      <button class="qopt" type="button">D · 4.5:1 for normal text (SC 1.4.3), 3:1 for graphic parts required to understand the content (SC 1.4.11)</button>
+      <p class="qwhy">Success criterion 1.4.3 sets 4.5:1 for text and 3:1 for large text (18 point, or 14 point bold). Success criterion 1.4.11 sets 3:1 for parts of graphics required to understand the content, which covers meaningful leader lines and part outlines.</p>
+    </div>
+
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Why do labelling tools only approximate the best placement, so that designers still hand-place awkward labels?</p>
+      <button class="qopt" type="button">A · Finding the best placement for all labels at once is NP-hard, so no known method guarantees the best answer as labels grow</button>
+      <button class="qopt" type="button">B · Because there are infinitely many positions around every point</button>
+      <button class="qopt" type="button">C · Because cartographic standards forbid automatic placement</button>
+      <button class="qopt" type="button">D · Because labels must always go to the right, which tools cannot detect</button>
+      <p class="qwhy">Christensen, Marks and Shieber work with a finite set of candidates, typically eight per point, scored on overlaps, position preference and points left unlabelled. Choosing the best combination is NP-hard (Marks and Shieber 1991), so tools approximate and hand-placing the hard cases is normal.</p>
+    </div>
+
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker">
+      <span class="klabel">Sources covered</span>
+      <h2>What this session teaches, and where it came from</h2>
+    </div>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Mayer and Moreno (2003), Nine ways to reduce cognitive load in multimedia learning</span><span class="note">Aligning words and pictures, the spatial contiguity effect (.48, a single study), the separated presentation defined by example, signaling; read at source. Sweller's split-attention effect and Hegarty and Just (1989) reported through this paper</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Christensen, Marks and Shieber (1995), An empirical study of algorithms for point-feature label placement</span><span class="note">Eight candidate positions, the three-part quality score (Yoeli 1972), NP-hardness (Marks and Shieber 1991), 20 to 30 labels per hour (Cook and Jones 1990, reported in the paper); read as MERL TR94-12</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">W3C (2023), WCAG 2.2, Understanding SC 1.4.3 and SC 1.4.11</span><span class="note">4.5:1 for text, 3:1 for large text, the contrast formula, 3:1 for graphic parts required to understand the content; read at source</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Imhof (1975), Positioning names on maps</span><span class="note">Legible, clearly associated, not covering other content; for points, right of the symbol first where space allows; reported from secondary summaries</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Leader-line habits and the one-or-two callout limit</span><span class="note">Working practice in technical illustration and cartography, stated as craft; no study behind them</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Wrenmoor Water, Nia, Owen, Ashbrook Library</span><span class="note">Constructed for teaching; the contrast pairs and bench numbers come from the constructed pages session 6 measures</span></div>
+    </div>
+    <p class="mono" style="margin-top:14px">Every fact on this page, and its verification tier, is recorded in the course's source map.</p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Name where the part is</b><span>Spatial contiguity: words beside the part they describe (.48, one study). A key makes every name a trip.</span></div>
+      <div class="cheat-item"><b>When a key wins</b><span>One symbol repeated many times, or parts too dense to name in place. Otherwise label directly.</span></div>
+      <div class="cheat-item"><b>Eight positions</b><span>Right of the part first (Imhof, reported); fall back round the ring only where right covers something.</span></div>
+      <div class="cheat-item"><b>Score like a cartographer</b><span>Overlaps + moves from first choice + names left out. Best placement is NP-hard, so hand-place the awkward ones.</span></div>
+      <div class="cheat-item"><b>Leader lines</b><span>Short, straight or one bend, cross nothing, end in a dot on the part, no arrowhead, text horizontal.</span></div>
+      <div class="cheat-item"><b>Two contrast numbers</b><span>Text 4.5:1 (large 3:1); lines and parts the reader needs 3:1. Measure; "looks readable" is not a ratio.</span></div>
+    </div>
+  </section>
+
+  <div class="callout next">
+    <span class="nx-pill">Next session</span>
+    <p>Nia's page is labelled and checked by hand. Session 6 puts it on the explainer bench: path length, crossings, label distance, lookups, contrast and overlaps, measured rung by rung, including one fix that looks tidy and makes the page worse.</p>
+  </div>
+
+  <footer class="pagefoot">
+    <span>Session 5 of 6 · learn-information-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="04-five-explaining-forms.html">← Prev: Five explaining forms</a> &nbsp;·&nbsp; <a href="06-the-explainer-bench.html">Next: The explainer bench →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

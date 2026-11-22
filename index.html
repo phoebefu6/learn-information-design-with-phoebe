@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- social:start -->
+<meta name="description" content="Six sessions on the explaining one-pager: decoration against explanation read at source, the reading path, drawing the mechanism, five explaining forms, labels and leader lines, and a bench that measures a page's path, labels, contrast and overlaps in your browser. Free, by Phoebe Fu.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Learn with Phoebe">
+<meta property="og:title" content="Learn Information Design with Phoebe">
+<meta property="og:description" content="An infographic is an explanation first. Six sessions on the one-page explainer of how something works, and a bench that measures a page as you move it.">
+<meta property="og:url" content="https://phoebefu6.github.io/learn-information-design-with-phoebe/">
+<meta property="og:image" content="https://phoebefu6.github.io/learn-information-design-with-phoebe/assets/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Learn Information Design with Phoebe">
+<meta name="twitter:description" content="Every mark carries the mechanism or it goes. Six sessions and a live explainer bench.">
+<meta name="twitter:image" content="https://phoebefu6.github.io/learn-information-design-with-phoebe/assets/og-cover.png">
+<!-- social:end -->
+<title>Learn Information Design with Phoebe</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: 1; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(var(--shadow-rgb),.16); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo-deep); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--muted); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,var(--indigo-50)); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .not-this { border: 1px solid var(--hairline); border-left: 4px solid var(--clay); border-radius: var(--radius); background: #fff; padding: 1.1rem 1.3rem; margin-top: 1.2rem; }
+  .not-this h3 { font-size: .95rem; font-weight: 800; margin-bottom: .5rem; }
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn with Phoebe · Visualisation</div>
+    <h1>Learn <span class="accent">Information Design</span> with Phoebe</h1>
+    <p class="sub">An infographic is an explanation first: every mark on the page either carries the mechanism or it goes. Six sessions on the one-page explainer of how something works: telling explanation from decoration, guiding the eye along a reading path, drawing the mechanism itself, picking the right explaining form, and putting labels where the parts are. One constructed running case, a water utility explaining what happens between the reservoir and your tap, and one bench that measures a page's path, labels, contrast and overlaps as you move it.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="6">6</b><span>sessions</span></div>
+      <div class="stat"><b data-count="6">6</b><span>measurements on the bench</span></div>
+      <div class="stat"><b data-count="2">2</b><span>constructed briefs to fix</span></div>
+      <div class="stat"><b data-count="168">168</b><span>bench values checked twice</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The six sessions 🧭 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· from a decorated draft to a measured explainer</span></h2>
+      <p class="plede">The running case is <strong>Wrenmoor Water, a constructed town water utility</strong>. After a boil-water notice, customers kept asking what happens to the water between the reservoir and their tap. Nia, who runs communications, owes them a one-page explainer; Owen, an engineer at the treatment works, knows every step. Her first draft is about water. Over six sessions it becomes an explanation of how water reaches you. Wrenmoor and everyone in it are invented for teaching, and every page says so.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/01-decoration-or-explanation.html" style="--diff:#34D399">
+        <span class="cicon">🧭</span>
+        <span class="cnum">Session 1 · foundations</span>
+        <h3>Decoration or explanation</h3>
+        <p>The one-pager's job is to explain how something works. The chartjunk debate read at source, three studies that measured three different things, and the four-way test every mark has to pass.</p>
+        <span class="meta"><span class="pill amber">▶ Start here</span></span>
+      </a>
+      <a class="course-card" href="courses/02-the-reading-path.html" style="--diff:#FBBF24">
+        <span class="cicon">🧭</span>
+        <span class="cnum">Session 2 · core</span>
+        <h3>The reading path</h3>
+        <p>Where the eye enters, how numbers and arrows carry it from step to step, and why each step's words belong beside its picture. The F-pattern read for what it actually says.</p>
+        <span class="meta"><span class="pill">entry, sequence, contiguity</span></span>
+      </a>
+      <a class="course-card" href="courses/03-draw-the-mechanism.html" style="--diff:#FBBF24">
+        <span class="cicon">⚙️</span>
+        <span class="cnum">Session 3 · core</span>
+        <h3>Draw the mechanism</h3>
+        <p>Let the subject carry the page: cutaway, exploded view and process drawing. Isotype's transformer, the person between the expert and the artist, and what to leave out.</p>
+        <span class="meta"><span class="pill">the subject carries the page</span></span>
+      </a>
+      <a class="course-card" href="courses/04-five-explaining-forms.html" style="--diff:#FB923C">
+        <span class="cicon">🗂️</span>
+        <span class="cnum">Session 4 · deeper</span>
+        <h3>Five explaining forms</h3>
+        <p>Process, anatomy, comparison, map and timeline: the question each one answers, how to pick one for a brief, and why charts belong to a different craft.</p>
+        <span class="meta"><span class="pill">pick the form by the question</span></span>
+      </a>
+      <a class="course-card" href="courses/05-labels-leader-lines-callouts.html" style="--diff:#FB923C">
+        <span class="cicon">🏷️</span>
+        <span class="cnum">Session 5 · deeper</span>
+        <h3>Labels, leader lines and callouts</h3>
+        <p>Names beside the parts they name, leader lines that never cross a word, the eight candidate positions cartographers use, callouts as signals, and contrast that clears WCAG 2.2.</p>
+        <span class="meta"><span class="pill">split attention, fixed</span></span>
+      </a>
+      <a class="course-card" href="courses/06-the-explainer-bench.html" style="--diff:#F87171">
+        <span class="cicon">📐</span>
+        <span class="cnum">Session 6 · bench night</span>
+        <h3>The explainer bench</h3>
+        <p>A constructed one-pager measured in your browser: path length and crossings, label distance and lookups, every contrast ratio and every overlap. Four fixes, a tidy-looking trap and a break button.</p>
+        <span class="meta"><span class="pill amber">★ the bench</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>foundations</span>
+      <span><i style="background:#FBBF24"></i>core</span>
+      <span><i style="background:#FB923C"></i>deeper</span>
+      <span><i style="background:#F87171"></i>bench night</span>
+    </div>
+  </section>
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>Your passport 🎫</h2>
+      <p class="plede">Clear all three quiz questions in a session and it gets stamped. Six stamps means you can audit a page mark by mark, lay out a reading path, draw a mechanism instead of a subject, pick the form a question needs, label parts where they are, and measure the result. Stamps live in this browser only.</p>
+    </div>
+    <div class="pp-strip"></div>
+  </section>
+  <section class="section">
+    <div class="not-this">
+      <h3>What this is not, so you land in the right place 🧭</h3>
+      <table class="clean">
+        <tr><th>If your question is</th><th>Go here instead</th></tr>
+        <tr><td>Which chart should show these numbers, and is it honest?</td><td><a href="https://phoebefu6.github.io/learn-dataviz-with-phoebe/">Data Visualisation ↗</a></td></tr>
+        <tr><td>What does the eye land on first on a dashboard screen, and how much weight does each tile carry?</td><td><a href="https://phoebefu6.github.io/learn-dashboard-design-with-phoebe/courses/02-hierarchy-first-glance.html">Dashboard Design, first glance ↗</a></td></tr>
+        <tr><td>How do I sequence an argument across a deck of slides?</td><td><a href="https://phoebefu6.github.io/learn-visual-storytelling-with-phoebe/">Visual Storytelling ↗</a></td></tr>
+        <tr><td>How do I generate an illustration and keep its lettering out?</td><td><a href="https://phoebefu6.github.io/learn-ai-illustration-with-phoebe/">AI Illustration ↗</a></td></tr>
+        <tr><td>How do I take visual notes live, map ideas radially, or write a diagram as code?</td><td><a href="https://phoebefu6.github.io/learn-sketchnoting-with-phoebe/">Sketchnoting ↗</a> · <a href="https://phoebefu6.github.io/learn-mind-mapping-with-phoebe/">Mind Mapping ↗</a> · <a href="https://phoebefu6.github.io/learn-mermaid-with-phoebe/">Mermaid ↗</a></td></tr>
+        <tr><td><strong>I need one page that shows how something works, clearly enough that a stranger could retell it.</strong></td><td><strong>you are in the right place</strong></td></tr>
+      </table>
+      <p style="margin-top:.7rem;font-size:.86rem;color:var(--muted)"><strong>Diagrams of mechanism, the whole page, labels and the reading path.</strong> Charts, screens, decks, generated images and notation are taught next door and linked from here rather than repeated.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Three doors into the same conviction: the page exists to explain.</p>
+      <div class="path"><b>📅 My one-pager ships this week</b>
+        <a class="pstep" href="courses/01-decoration-or-explanation.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-labels-leader-lines-callouts.html">5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-the-explainer-bench.html">6</a>
+        <span style="font-size:.82rem;color:var(--muted)">audit the marks, fix the labels, measure it</span>
+      </div>
+      <div class="path"><b>✏️ I start from a blank page</b>
+        <a class="pstep" href="courses/04-five-explaining-forms.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-draw-the-mechanism.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-the-reading-path.html">2</a>
+        <span style="font-size:.82rem;color:var(--muted)">pick the form, draw the mechanism, lay the path</span>
+      </div>
+      <div class="path"><b>🧭 The whole craft</b>
+        <a class="pstep" href="courses/01-decoration-or-explanation.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-the-reading-path.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-draw-the-mechanism.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-five-explaining-forms.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-labels-leader-lines-callouts.html">5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-the-explainer-bench.html">6</a>
+        <span style="font-size:.82rem;color:var(--muted)">from the decorated draft to the measured page</span>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>What is honest here 🧾</h2>
+      <p class="plede">Design advice travels with famous research, and the decoration debate is quoted on both sides. Each claim on these pages carries its status.</p>
+    </div>
+    <table class="clean">
+      <tr><th>Claim</th><th>Status</th></tr>
+      <tr><td>Every bench figure: path length, crossings, label distance, lookups, contrast ratios, overlaps</td><td><strong>Really computed</strong> in your browser from two constructed pages, with the WCAG 2.2 contrast formula; an independent Python run agrees on every value</td></tr>
+      <tr><td>The bench's entry rule and four-part score</td><td><strong>Stated models,</strong> printed on the widget with their weights, not laws</td></tr>
+      <tr><td>"Chartjunk hurts" against "useful junk helps"</td><td><strong>A live disagreement,</strong> taught as one: the studies measured understanding, recall and memorability, three different outcomes. Session 1 reads them at source</td></tr>
+      <tr><td>"Readers scan in an F"</td><td><strong>Conditional.</strong> Nielsen Norman Group describe it as the default when a page gives no strong cues, and call it bad for readers. Session 2 tiers it</td></tr>
+      <tr><td>Wrenmoor Water, Ashbrook Library, Nia, Owen and every one of their numbers</td><td><strong>Constructed,</strong> for teaching</td></tr>
+    </table>
+  </section>
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">The whole path at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+  <footer class="pagefoot">
+    <span>learn-information-design-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span>Neighbours on the shelf: <a href="https://phoebefu6.github.io/learn-dataviz-with-phoebe/">Data Visualisation ↗</a> &nbsp;·&nbsp; <a href="https://phoebefu6.github.io/learn-dashboard-design-with-phoebe/">Dashboard Design ↗</a> &nbsp;·&nbsp; <a href="https://phoebefu6.github.io/learn-visual-storytelling-with-phoebe/">Visual Storytelling ↗</a></span>
+  </footer>
+</main>
+<script>
+window.MINDMAP_DATA = {
+ "title": "Information\ndesign",
+ "centerColor": "#7A2414",
+ "sessions": [
+  {
+   "label": "Decoration or\nexplanation",
+   "href": "courses/01-decoration-or-explanation.html",
+   "color": "#34D399",
+   "concepts": [
+    {
+     "label": "Retell test",
+     "href": "courses/01-decoration-or-explanation.html"
+    },
+    {
+     "label": "Three studies, three outcomes",
+     "href": "courses/01-decoration-or-explanation.html"
+    },
+    {
+     "label": "The four-way mark test",
+     "href": "courses/01-decoration-or-explanation.html"
+    }
+   ]
+  },
+  {
+   "label": "The reading\npath",
+   "href": "courses/02-the-reading-path.html",
+   "color": "#FBBF24",
+   "concepts": [
+    {
+     "label": "Entry point",
+     "href": "courses/02-the-reading-path.html"
+    },
+    {
+     "label": "Numbers and arrows",
+     "href": "courses/02-the-reading-path.html"
+    },
+    {
+     "label": "Words beside the step",
+     "href": "courses/02-the-reading-path.html"
+    }
+   ]
+  },
+  {
+   "label": "Draw the\nmechanism",
+   "href": "courses/03-draw-the-mechanism.html",
+   "color": "#FBBF24",
+   "concepts": [
+    {
+     "label": "Cutaway and exploded view",
+     "href": "courses/03-draw-the-mechanism.html"
+    },
+    {
+     "label": "The transformer role",
+     "href": "courses/03-draw-the-mechanism.html"
+    },
+    {
+     "label": "Leave things out",
+     "href": "courses/03-draw-the-mechanism.html"
+    }
+   ]
+  },
+  {
+   "label": "Five explaining\nforms",
+   "href": "courses/04-five-explaining-forms.html",
+   "color": "#FB923C",
+   "concepts": [
+    {
+     "label": "One question, one form",
+     "href": "courses/04-five-explaining-forms.html"
+    },
+    {
+     "label": "Process or anatomy",
+     "href": "courses/04-five-explaining-forms.html"
+    },
+    {
+     "label": "Never a chart here",
+     "href": "courses/04-five-explaining-forms.html"
+    }
+   ]
+  },
+  {
+   "label": "Labels, leaders\nand callouts",
+   "href": "courses/05-labels-leader-lines-callouts.html",
+   "color": "#FB923C",
+   "concepts": [
+    {
+     "label": "Direct labels, not keys",
+     "href": "courses/05-labels-leader-lines-callouts.html"
+    },
+    {
+     "label": "Leader-line rules",
+     "href": "courses/05-labels-leader-lines-callouts.html"
+    },
+    {
+     "label": "Contrast 4.5:1",
+     "href": "courses/05-labels-leader-lines-callouts.html"
+    }
+   ]
+  },
+  {
+   "label": "The explainer\nbench",
+   "href": "courses/06-the-explainer-bench.html",
+   "color": "#F87171",
+   "concepts": [
+    {
+     "label": "Path and crossings",
+     "href": "courses/06-the-explainer-bench.html"
+    },
+    {
+     "label": "Tidy key: anti-lever",
+     "href": "courses/06-the-explainer-bench.html"
+    },
+    {
+     "label": "Decoration: break",
+     "href": "courses/06-the-explainer-bench.html"
+    }
+   ]
+  }
+ ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
